@@ -3,6 +3,9 @@
 PossibleWorldsNet implementation from,
 "Can Neural Networks Understand Logical Entailment"
 https://openreview.net/pdf?id=SkZxCk-0Z
+
+This model is originally based on: 
+https://github.com/act65/entailment
 """
 
 from __future__ import print_function
