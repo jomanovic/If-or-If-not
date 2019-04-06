@@ -1,15 +1,21 @@
 # If-or-If-not
-Implementation of models found in "Can Neural Networks Understand Logical Entailment" (CNNULE): https://openreview.net/pdf?id=SkZxCk-0Z.
 
-All of the models are written in Tensorflow 2.0.
+This repository contains implementations of several baseline/benchmark models as well as a newly proposed variant of TreeNets called "PossibleWorldsNet" for the purpose of result verification. For further details, please refer to https://openreview.net/pdf?id=SkZxCk-0Z: "Can Neural Networks Understand Logical Entailment" by Richard Evans, David Saxton, David Amos, Pushmeet Kohli and Edward Grefenstette.
 
-Baseline models: Linear and Multi-Linear Percepton
+## The models:
 
-Encoder models: ConvNet, LSTM, BidirLSTM
+## Baseline models: 
+- Linear BoW
+- MLP BoW
 
-Relational models: LSTM, BidirLSTM
+## Encoder models: 
+- ConvNet https://arxiv.org/abs/1509.01626
+- LSTM https://www.bioinf.jku.at/publications/older/2604.pdf
+- BidirLSTM 
 
-CNNULE model: PossibleWorldsNet
+## Relational models:
+- LSTM 
+- BidirLSTM
 
-The details of these models and implementations can be found in the original paper and/or in the short review pdf.
-
+## TreeNets models: 
+- PossibleWorldsNet
