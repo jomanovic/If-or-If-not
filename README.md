@@ -2,8 +2,6 @@
 
 This repository contains implementations of several baseline/benchmark models as well as a newly proposed variant of TreeNets called "PossibleWorldsNet" for the purpose of result verification. For further details, please refer to https://openreview.net/pdf?id=SkZxCk-0Z: "Can Neural Networks Understand Logical Entailment" by Richard Evans, David Saxton, David Amos, Pushmeet Kohli and Edward Grefenstette.
 
-## The models:
-
 ## Baseline models: 
 - Linear BoW
 - MLP BoW
