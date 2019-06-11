@@ -1,7 +1,7 @@
 ![](https://github.com/jomanovic/If-or-If-not/blob/master/display/cnnule.png)
 <h4 align="center">An implementation of baseline, benchmark and state of the art models from CNNULE</a></h4>
 
-<p align="left">
+<p align="center">
   <a href="#description">Description</a> •
   <a href="#results">Results</a> •
   <a href="#license">License</a>
@@ -25,7 +25,7 @@ This repository contains implementations of models in ["Can Neural Networks Unde
   - [LSTM](https://www.bioinf.jku.at/publications/older/2604.pdf)
   - BidirLSTM
 
--  TreeNets models: 
+- TreeNets models: 
   - PossibleWorldsNet
 
 ## LSTMs
