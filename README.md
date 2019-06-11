@@ -1,19 +1,44 @@
-# If-or-If-not
+![](https://github.com/jomanovic/If-or-If-not/blob/master/display/cnnule.png)
+<h4 align="center">An implementation of baseline, benchmark and state of the art models from CNNULE</a></h4>
 
-This repository contains implementations of several baseline/benchmark models as well as a newly proposed variant of TreeNets called "PossibleWorldsNet" for the purpose of result verification. For further details, please refer to https://openreview.net/pdf?id=SkZxCk-0Z: "Can Neural Networks Understand Logical Entailment" by Richard Evans, David Saxton, David Amos, Pushmeet Kohli and Edward Grefenstette.
+<p align="left">
+  <a href="#description">Description</a> •
+  <a href="#results">Results</a> •
+  <a href="#license">License</a>
+</p>
 
-## Baseline models: 
-- Linear BoW
-- MLP BoW
 
-## Encoder models: 
-- ConvNet https://arxiv.org/abs/1509.01626
-- LSTM https://www.bioinf.jku.at/publications/older/2604.pdf
-- BidirLSTM 
+## Description
 
-## Relational models:
-- LSTM 
-- BidirLSTM
+This repository contains implementations of models in ["Can Neural Networks Understand Logical Entailment?](https://openreview.net/pdf?id=SkZxCk-0Z) The models covered include:
 
-## TreeNets models: 
-- PossibleWorldsNet
+- Baseline models: 
+  - [Linear BoW](https://en.wikipedia.org/wiki/Bag-of-words_model)
+  - [MLP BoW](https://en.wikipedia.org/wiki/Bag-of-words_model)
+
+- Encoder models: 
+  - [ConvNet](https://arxiv.org/abs/1509.01626)
+  - [LSTM](https://www.bioinf.jku.at/publications/older/2604.pdf)
+  - BidirLSTM 
+
+- Relational models:
+  - [LSTM](https://www.bioinf.jku.at/publications/older/2604.pdf)
+  - BidirLSTM
+
+-  TreeNets models: 
+  - PossibleWorldsNet
+
+## LSTMs
+
+![](https://github.com/jomanovic/If-or-If-not/blob/master/display/lstmbidir.png)
+
+## TreeNets
+
+![](https://github.com/jomanovic/If-or-If-not/blob/master/display/recursive.png)
+
+## Results
+
+![](https://github.com/jomanovic/If-or-If-not/blob/master/display/results.png)
+
+## License
+MIT
