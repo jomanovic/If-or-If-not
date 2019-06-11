@@ -1,13 +1,6 @@
 ![](https://github.com/jomanovic/If-or-If-not/blob/master/display/cnnule.png)
 <h4 align="center">An implementation of baseline, benchmark and state of the art models from CNNULE</a></h4>
 
-<p align="center">
-  <a href="#description">Description</a> •
-  <a href="#results">Results</a> •
-  <a href="#license">License</a>
-</p>
-
-
 ## Description
 
 This repository contains implementations of models in ["Can Neural Networks Understand Logical Entailment?](https://openreview.net/pdf?id=SkZxCk-0Z) The models covered include:
