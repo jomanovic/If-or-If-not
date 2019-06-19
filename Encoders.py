@@ -6,10 +6,11 @@ Hyperopt + Keras : https://github.com/maxpumperla/hyperas
 """
 
 
-# Hyper-parameter optimization
+# Hyper-parameter optimization 
 from hyperopt import Trials, STATUS_OK, tpe
 from hyperas import optim
 from hyperas.distributions import choice, uniform
+
 
 from tensorflow.keras.layers import LSTM, CuDNNLSTM, Flatten, Reshape, concatenate, TimeDistributed
 from tensorflow.keras.layers import Dropout, Input, Dense, ThresholdedReLU, Embedding, Bidirectional 
@@ -26,8 +27,8 @@ import numpy as np
 def data():
     
     
-    A_0, B_0, y_0 = zip(*data.read_data('../Logical_Entailment/temp/train.txt'))
-    A_1, B_1, y_1 = zip(*data.read_data('../Logical_Entailment/temp/validate.txt'))
+    A_0, B_0, y_0 = zip(*data.read_data('../temp/train.txt'))
+    A_1, B_1, y_1 = zip(*data.read_data('../temp/validate.txt'))
     y_0, y_1 = np.array(y_0), np.array(y_1)
     
     # Longest sentence length
@@ -64,7 +65,7 @@ def LSTM(A, B, y, val_A, val_B, val_y, maxlen, vocab_size):
     
     with tf.device('/GPU:0'):
         
-        lr = {{choice([1e-3, 1e-4])}} # Learning rate
+        lr = 1e-3 # Learning rate
         epochs = 40 # Number of epochs
         batch_size = 32 # Batch size 
         lstm_dim = 64 # LSTM dimension
@@ -119,12 +120,12 @@ def biLSTM(X_1, X_2, y, X_1_val, X_2_val, y_val, maxlen, vocab_size):
     tf.keras.backend.clear_session()
     with tf.device('/GPU:0'):
         
-        lr = {{choice([1e-3, 1e-4])}} # Learning rate
-        epochs = {{choice([20])}} # Number of epochs
-        batch_size = {{choice([32, 64])}} # Batch size 
-        lstm_dim = {{choice([32, 64])}} # LSTM dimension
-        emb_dim = {{choice([32, 64])}} # Embedding dimension
-        num_dnn = {{choice([1, 2])}} # Size of outer DNN layers
+        lr = 1e-3 # Learning rate
+        epochs = 20 # Number of epochs
+        batch_size = 32 # Batch size 
+        lstm_dim = 64 # LSTM dimension
+        emb_dim = 64 # Embedding dimension
+        num_dnn = 2 # Number of outer DNN layers
 
         
         input_aux = Input(shape=(maxlen,))
@@ -177,6 +178,8 @@ def CNN(X_1, X_2, y, X_1_val, X_2_val, y_val, maxlen, vocab_size):
     
     tf.keras.backend.clear_session()
 
+    # Hyperparameter optimization via Hyperas
+    
     lr = {{choice([1e-2, 1e-3,1e-4,1e-5])}} # Learning rate
     epochs = {{choice([10, 20, 30])}} # Number of epochs
     batch_size = {{choice([64, 128])}} # Batch size 
