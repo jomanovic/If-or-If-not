@@ -10,16 +10,12 @@ import data
 
 from utils import vocabulary, BoW_embedding, num_encode
 
-class MLP(tf.keras.Model):
-    def __init__(self, hidden_dims):
-        super(MLP, self).__init__()
-        self.model = tf.keras.Sequential()        
-        for dim in hidden_dims:
-            self.model.add(tf.keras.layers.Dense(dim, activation='sigmoid'))
-        self.model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
-        
-    def call(self, X):
-        return self.model(X)
+def MLP(hidden_dims):
+    model = tf.keras.Sequential()        
+    for dim in hidden_dims:
+        model.add(tf.keras.layers.Dense(dim, activation='sigmoid'))
+    model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
+    return model
 
 def BoW_data(datadir='../Logical_Entailment/temp', filename='train.txt'):
     A, B, y = zip(*data.read_data(os.path.join(datadir, filename)))
